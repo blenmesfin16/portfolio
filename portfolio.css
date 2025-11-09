@@ -1361,7 +1361,7 @@ h6 {
 
 @media (max-width: 576px) {
   .header {
-    padding: 10% 0 55px 0 !important;
+    padding: 10% 0 50px 0 !important;
   }
   
   .hero-content {
@@ -1384,5 +1384,33 @@ h6 {
   .projects-grid {
     padding: 0 20px !important;
     gap: 20px !important;
+  }
+}
+@media (max-width: 768px) {
+  .project-card {
+    border-radius: 20px !important; /* Rounder container */
+    overflow: hidden !important;
+  }
+  
+  .project-image {
+    border-radius: 20px !important; /* Rounder image container */
+    overflow: hidden !important;
+  }
+  
+  .project-image img {
+    border-radius: 20px !important; /* Rounder image edges */
+  }
+  
+  .project-overlay {
+    border-radius: 20px !important; /* Rounder overlay to match */
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card,
+  .project-image,
+  .project-image img,
+  .project-overlay {
+    border-radius: 15px !important; /* Slightly less rounded on small screens */
   }
 }
