@@ -972,3 +972,317 @@ h6 {
     height: 40px;
   }
 }
+/* Remove even more space - ultra minimal */
+@media (max-width: 768px) {
+  /* Remove ALL left space of three lines menu */
+  .nav-container {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  .hamburger {
+    margin-left: -10px !important; /* Push even further left */
+    padding-left: 0 !important;
+  }
+  
+  /* Remove ALL right space of about me boxes */
+  .about-details .glass-card,
+  .about-card.glass-card {
+    margin-right: -10px !important; /* Extend beyond container */
+    padding-right: 5px !important;
+    width: calc(100% + 10px) !important; /* Force wider than container */
+  }
+  
+  /* Keep minimal left space of boxes */
+  .about-details .glass-card,
+  .about-card.glass-card {
+    margin-left: 5px !important; /* Minimal left space */
+    padding-left: 10px !important;
+  }
+  
+  .hamburger {
+    margin-right: 0 !important; /* Remove right space completely */
+  }
+  
+  /* Force containers to allow overflow */
+  .container {
+    overflow: visible !important;
+  }
+  
+  .about-details,
+  .about-section .container {
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Even more aggressive on small phones */
+  .hamburger {
+    margin-left: -15px !important;
+  }
+  
+  .about-details .glass-card,
+  .about-card.glass-card {
+    margin-right: -15px !important;
+    width: calc(100% + 15px) !important;
+    margin-left: 2px !important; /* Almost no left space */
+  }
+}
+/* Unique approach: Expand boxes to right space only */
+@media (max-width: 768px) {
+  /* Force boxes to expand into right space */
+  .about-details .glass-card,
+  .about-card.glass-card {
+    width: auto !important;
+    min-width: unset !important;
+    margin-left: 15px !important;  /* Keep left space as is */
+    margin-right: -20px !important; /* Expand into right space */
+    padding: 20px 25px 20px 15px !important; /* More right padding */
+  }
+  
+  /* Make container allow right overflow */
+  .about-section .container {
+    overflow-x: visible !important;
+    padding-right: 0 !important;
+  }
+  
+  .about-details {
+    margin-right: -15px !important; /* Pull content to right */
+    width: auto !important;
+  }
+  
+  /* Push hamburger to far left */
+  .hamburger {
+    margin-left: -15px !important;
+    position: relative;
+    left: -10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* More aggressive on small screens */
+  .about-details .glass-card,
+  .about-card.glass-card {
+    margin-left: 10px !important;
+    margin-right: -25px !important; /* Expand even more right */
+    padding: 15px 30px 15px 12px !important;
+  }
+  
+  .about-details {
+    margin-right: -20px !important;
+  }
+  
+  .hamburger {
+    margin-left: -20px !important;
+    left: -15px !important;
+  }
+}
+/* Force everything to cover full screen width */
+@media (max-width: 768px) {
+  /* Make ALL containers full width */
+  .container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Force ALL boxes to full width */
+  .about-details .glass-card,
+  .about-card.glass-card,
+  .glass-card,
+  .skill-card,
+  .project-card,
+  .contact-form,
+  .contact-info {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 20px 15px !important;
+    border-radius: 0 !important;
+  }
+  
+  /* Make profile image full width */
+  .profile-frame {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .profile-img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 0 !important;
+  }
+  
+  /* Force hero content full width */
+  .hero-content {
+    width: 100vw !important;
+    padding: 0 15px !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem !important;
+    text-align: center !important;
+  }
+  
+  /* Remove ALL side spaces */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Make sections full width */
+  .hero,
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .contact-section {
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 80px 0 !important;
+  }
+  
+  /* Fix navigation full width */
+  .header {
+    width: 100vw !important;
+    padding: 15px 0 !important;
+  }
+  
+  .nav-container {
+    width: 100vw !important;
+    padding: 0 15px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-details .glass-card,
+  .about-card.glass-card,
+  .glass-card {
+    padding: 15px 10px !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem !important;
+  }
+}
+@media (max-width: 768px) {
+  /* Keep profile pic as circle */
+  .profile-frame {
+    width: 300px !important;
+    height: 300px !important;
+    max-width: 300px !important;
+    border-radius: 50% !important;
+    margin: 0 auto !important;
+    border: 5px solid var(--primary-light) !important;
+  }
+  
+  .profile-img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    object-fit: cover !important;
+  }
+  
+  /* Fix footer visibility and placement */
+  .footer {
+    position: relative !important;
+    z-index: 999 !important;
+    padding: 40px 0 100px !important; /* Extra bottom padding for social icons */
+    margin-bottom: 0 !important;
+  }
+  
+  .footer-content {
+    text-align: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  
+  .footer-content pre {
+    margin: 0 auto !important;
+    text-align: center !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    width: 100% !important;
+    font-size: 1rem !important;
+    color: var(--text-color) !important;
+  }
+  
+  /* Ensure social icons don't overlap footer */
+  .social-float {
+    bottom: 25px !important;
+    z-index: 998 !important;
+  }
+  
+  /* Adjust section padding to accommodate footer */
+  .contact-section {
+    padding-bottom: 80px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-frame {
+    width: 250px !important;
+    height: 250px !important;
+    max-width: 250px !important;
+  }
+  
+  .footer {
+    padding: 30px 0 90px !important;
+  }
+  
+  .footer-content pre {
+    font-size: 0.9rem !important;
+  }
+  
+  .social-float {
+    bottom: 20px !important;
+  }
+}
+@media (max-width: 768px) {
+  /* Add top padding to hero section */
+  .hero {
+    padding-top: 120px !important; /* Increased top padding */
+    min-height: calc(100vh - 80px) !important;
+  }
+  
+  /* Ensure hero content is fully visible */
+  .hero-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  .hero-content h1 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Adjust header height if needed */
+  .header {
+    height: 70px !important;
+  }
+  
+  /* Push content down from fixed header */
+  body {
+    padding-top: 70px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 100px !important;
+    min-height: calc(100vh - 70px) !important;
+  }
+  
+  body {
+    padding-top: 60px !important;
+  }
+  
+  .header {
+    height: 60px !important;
+  }
+}
