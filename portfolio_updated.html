@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blen Mesfin | Portfolio</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>Blen Mesfin | Software Engineer | ML & Data Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Protest+Guerrilla&display=swap"
@@ -19,6 +19,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script>
+      // Prevent flash of wrong theme — runs before page renders
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved === "light") {
+          document.documentElement.classList.add("light-mode-preload");
+          document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("light-mode");
+          });
+        }
+      })();
+    </script>
 </head>
 <body>
      <!-- Animated Background Elements -->
@@ -66,6 +78,10 @@
               <span class="bar"></span>
             </div>
           </nav>
+          <!-- Theme Toggle Button -->
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -78,10 +94,12 @@
             <h1 class="animate__animated animate__fadeInDown">
               Hello, <br />
               I'm <span class="name-highlight">Blen</span>
-              <span class="title">Software Engineering Student</span>
+              <span class="title">Software Engineer & AI/ML Enthusiast</span>
             </h1>
             <p class="animate__animated animate__fadeIn animate__delay-1s">
-              Passionate about coding and creating digital solutions. Currently learning full-stack development with a focus on frontend technologies and preparing to learn modern frameworks.
+              A 4th-year Software Engineering student passionate about building full-stack web applications
+              with <strong>Django</strong> and turning raw data into insight through <strong>Machine Learning,
+              Data Engineering, and Analytics</strong>. I love crafting end-to-end solutions — from API to model.
             </p>
             <div
               class="hero-buttons animate__animated animate__fadeInUp animate__delay-1s"
@@ -95,7 +113,7 @@
             <div class="image-wrapper">
               <div class="profile-frame">
                 <img
-                  src="img/me3.jpg"
+                  src="img/photo.png"
                   alt="Blen Mesfin"
                   class="profile-img"
                 />
@@ -152,22 +170,25 @@
             <i class="fas fa-user-tie"></i>
           </div>
           <p>
-            I'm Blen Mesfin, a passionate software engineering student at Wollo University KIOT. 
-            I'm currently focused on frontend development while expanding my skills in Python and  preparing to dive into modern frameworks and backend technologies.
-            I enjoy solving problems through code and building practical applications.
+            I'm <strong>Blen Mesfin</strong>, a 4th-year Software Engineering student at Wollo University – KIOT
+            with a growing specialization in <strong>Machine Learning, Data Engineering, and Fullstack Django Development</strong>.
+            I've completed a rigorous, project-based <strong>AI Mastery Program at 10 Academy (Kifiya)</strong> covering
+            ML, data analysis, data engineering, and AI — applied to real-world business use cases.
+            Whether it's training a fraud-detection model, building a time-series forecaster, or shipping a Django
+            REST API, I enjoy owning the full pipeline: <em>data → model → backend → user</em>.
           </p>
           <div class="about-highlights">
             <div class="highlight">
               <i class="fas fa-check-circle"></i>
-              <span>Problem-solving mindset</span>
+              <span>End-to-End Problem Solver</span>
             </div>
             <div class="highlight">
               <i class="fas fa-check-circle"></i>
-              <span>Quick learner</span>
+              <span>ML + Fullstack Mindset</span>
             </div>
             <div class="highlight">
               <i class="fas fa-check-circle"></i>
-              <span>Detail-oriented</span>
+              <span>Data-Driven Thinker</span>
             </div>
           </div>
         </div>
@@ -178,18 +199,27 @@
         </div>
         <div class="about-details">
             <div class="education glass-card">
-              <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+              <h3><i class="fas fa-graduation-cap"></i> Education & Training</h3>
               <p><br>
-                Currently studying Software Engineering at Wollo University KIOT
+                <strong>BSc in Software Engineering</strong> — Wollo University, KIOT (Sep 2023 – Jun 2028)
+              </p>
+              <p>
+                <strong>10 Academy — Kifiya AI Mastery Program</strong> — Project-based training in Machine Learning,
+                Data Analysis, Data Engineering, AI, and Python, applied to real-world business use cases.
               </p>
               <p>Web development classes at Andalus Coding Academy</p>
-              <p>
-                International certification from Udacity in Programming Fundamentals
-              </p>
+              <p>Udacity International Certification in Programming Fundamentals</p>
             </div>
             <div class="education glass-card">
           <h2><i style="font-size: 20px;" class="fa-solid fa-bag-shopping"></i> Experience</h2><br>
-          <p>I have experience developing academic projects including a face detector with C++, salary management system with Java, and cloning a construction website. I'm currently expanding my skills in Python with projects like a food ordering system and random password generator.</p>
+          <p>
+            <strong>Machine Learning Intern @ SYNTECXHUB</strong> — Working on applied ML projects and pipelines.
+          </p>
+          <p>
+            Built academic fullstack projects using <strong>Django</strong>, and earlier projects in C++ (face detector)
+            and Java (salary management system). I've grown from frontend fundamentals into <strong>Python-powered
+            backend development with Django</strong> and applied machine learning.
+          </p>
         </div>
       </div>
     </section>
@@ -199,29 +229,59 @@
       <div class="container">
         <h2 class="section-title">My <span>Skills</span></h2>
         <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3>Frontend Development</h3>
-            <p>
-              HTML, CSS, JavaScript, and responsive web design. Currently Preparing to start learning modern frameworks.
-            </p>
-            <div class="skill-bar">
-              <div class="skill-progress" data-width="75%"></div>
-            </div>
-          </div>
 
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-python"></i>
             </div>
-            <h3>Python Programming</h3>
+            <h3>Backend — Django & Python</h3>
             <p>
-              Learning Python fundamentals through small projects. Exploring basic concepts and building simple applications.
+              Building fullstack web apps with <strong>Django</strong>, Python, REST-style APIs, authentication,
+              and database models. Comfortable with the MVT architecture and end-to-end app deployment.
             </p>
             <div class="skill-bar">
-              <div class="skill-progress" data-width="65%"></div>
+              <div class="skill-progress" data-width="80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>
+              Scikit-learn, predictive modeling, statistical analysis, imbalanced-data handling, SHAP explainability,
+              NLP & sentiment analysis, and time-series forecasting.
+            </p>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>Data Engineering & Analysis</h3>
+            <p>
+              Data wrangling and analysis with <strong>Pandas</strong> and <strong>NumPy</strong>, building ML-ready
+              pipelines, geolocation enrichment, and analytics dashboards with Matplotlib & Seaborn.
+            </p>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Frontend & Web</h3>
+            <p>
+              HTML, CSS, JavaScript for responsive web design; building frontends that consume Django APIs.
+            </p>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="75%"></div>
             </div>
           </div>
 
@@ -231,13 +291,27 @@
             </div>
             <h3>Java & C++</h3>
             <p>
-              Gained foundational programming knowledge through university courses 
-              in Java and C++, focusing on core programming concepts.
+              Foundational OOP and systems programming from university coursework — face detection (C++) and
+              salary management system (Java).
             </p>
             <div class="skill-bar">
               <div class="skill-progress" data-width="70%"></div>
             </div>
           </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Tools & Workflow</h3>
+            <p>
+              Jupyter Notebook, Git & GitHub, VS Code, and collaborative project workflows.
+            </p>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85%"></div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -247,44 +321,91 @@
       <div class="container">
         <h2 class="section-title">My <span>Projects</span></h2>
         <div class="projects-grid">
+
           <div class="project-card">
             <div class="project-image">
-              <img src="img/web2.jpg" alt="Portfolio Website" />
+              <img src="img/fraudd.png" alt="Fraud Detection" />
               <div class="project-overlay">
-                <h3>Portfolio Website</h3>
+                <h3>Fraud Detection System</h3>
                 <p>
-                  A responsive portfolio website built with HTML, CSS, and JavaScript to showcase my projects and skills.
+                  End-to-end ML system for e-commerce & banking transactions — imbalanced-data handling,
+                  geolocation enrichment, and SHAP explainability for transparent predictions.
                 </p>
-                <a href="#" class="project-link">View Details</a>
+                <a href="https://github.com/blenmesfin16" class="project-link">View on GitHub</a>
               </div>
             </div>
           </div>
 
           <div class="project-card">
             <div class="project-image">
-              <img src="img/python.jpg" alt="Python Projects" />
+              <img src="img/gmf.png" alt="Credit Risk Model" />
               <div class="project-overlay">
-                <h3>Python Applications</h3>
+                <h3>Credit Risk Model</h3>
                 <p>
-                  Collection of Python projects including basic pizza ordering system, random password generator, and name picker for group bill payment.
+                  End-to-end ML project predicting credit risk using alternative financial data —
+                  feature engineering, model selection, and evaluation.
                 </p>
-                <a href="#" class="project-link">View Details</a>
+                <a href="https://github.com/blenmesfin16" class="project-link">View on GitHub</a>
               </div>
             </div>
           </div>
 
           <div class="project-card">
             <div class="project-image">
-              <img src="img/web1.jpg" alt="Academic Projects" />
+              <img src="img/boc.png" alt="Brent Oil Change Point" />
               <div class="project-overlay">
-                <h3>Academic Projects</h3>
+                <h3>Brent Oil Change Point Analysis</h3>
                 <p>
-                  University projects including face detector with C++ and salary management system with Java.
+                  Statistical and time-series analysis of Brent oil prices to detect significant
+                  structural changes and patterns.
                 </p>
-                <a href="#" class="project-link">View Details</a>
+                <a href="https://github.com/blenmesfin16" class="project-link">View on GitHub</a>
               </div>
             </div>
           </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="img/gmf.png" alt="GMF Time Series" />
+              <div class="project-overlay">
+                <h3>GMF Time-Series Forecasting</h3>
+                <p>
+                  Time-series forecasting project using historical data to predict future trends,
+                  with model comparison and evaluation.
+                </p>
+                <a href="https://github.com/blenmesfin16" class="project-link">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="img/insurance.png" alt="Insurance Risk Analytics" />
+              <div class="project-overlay">
+                <h3>Insurance Risk Analytics</h3>
+                <p>
+                  End-to-end insurance risk analysis and predictive modeling project for
+                  AlphaCare Insurance Solutions.
+                </p>
+                <a href="https://github.com/blenmesfin16" class="project-link">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="img/django.jpg" alt="Django Fullstack" />
+              <div class="project-overlay">
+                <h3>Django Fullstack Applications</h3>
+                <p>
+                  Fullstack web apps built with Django — models, views, templates, authentication,
+                  and database integration, plus earlier Python projects (food-ordering system, password generator).
+                </p>
+                <a href="https://github.com/blenmesfin16" class="project-link">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -330,6 +451,12 @@
                   <a href="tel:+251983586508">+251 98 358 6508</a>
                 </li>
                 <li>
+                  <i class="fab fa-github"></i>
+                  <a href="https://github.com/blenmesfin16" target="_blank"
+                    >github.com/blenmesfin16</a
+                  >
+                </li>
+                <li>
                   <i class="fab fa-telegram"></i>
                   <a href="https://t.me/forgivennnnn" target="_blank"
                     >@forgivennnnn</a
@@ -361,10 +488,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script>
-      // Current year for footer
+      // ===== Theme Toggle =====
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = themeToggle.querySelector("i");
+
+      function applyTheme(theme) {
+        if (theme === "light") {
+          document.body.classList.add("light-mode");
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+        } else {
+          document.body.classList.remove("light-mode");
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+        }
+      }
+
+      // Initialize icon based on saved/system theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        applyTheme("light");
+      } else {
+        applyTheme("dark");
+      }
+
+      // Remove preload class after load (prevents flash)
+      window.addEventListener("load", () => {
+        document.documentElement.classList.remove("light-mode-preload");
+      });
+
+      // Toggle on click
+      themeToggle.addEventListener("click", () => {
+        const isLight = document.body.classList.contains("light-mode");
+        const newTheme = isLight ? "dark" : "light";
+        applyTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+
+      // ===== Current year for footer =====
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Mobile menu toggle
+      // ===== Mobile menu toggle =====
       const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
 
@@ -381,7 +545,7 @@
         });
       });
 
-      // Update active nav link on scroll
+      // ===== Update active nav link on scroll =====
       const sections = document.querySelectorAll("section");
       const navLinksAll = document.querySelectorAll(".nav-link");
 
@@ -413,7 +577,7 @@
         }
       });
 
-      // Animate skill bars on scroll
+      // ===== Animate skill bars on scroll =====
       document.querySelectorAll(".skill-progress").forEach((bar) => {
         const width = bar.getAttribute("data-width");
         gsap.to(bar, {
@@ -428,7 +592,7 @@
         });
       });
 
-      // Scroll reveal animation
+      // ===== Scroll reveal animation =====
       gsap.utils
         .toArray(".skill-card, .project-card, .glass-card")
         .forEach((item) => {
@@ -444,23 +608,20 @@
           });
         });
 
-      // Form submission
+      // ===== Form submission =====
       const form = document.querySelector("form");
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        // Get form values
         const name = form.querySelector("input[type='text']").value;
         const email = form.querySelector("input[type='email']").value;
         const message = form.querySelector("textarea").value;
 
-        // Simple validation
         if (!name || !email || !message) {
           alert("Please fill in all fields");
           return;
         }
 
-        // Here you would normally send to a server
         console.log({ name, email, message });
         alert("Message sent successfully!");
         form.reset();
